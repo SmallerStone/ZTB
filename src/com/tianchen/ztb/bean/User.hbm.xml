@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="com.tianchen.ztb.bean.User" table="t_User">
+		<id name="id">
+			<generator class="native"/>
+		</id>
+		<property name="userName" not-null="true" unique="true"/>
+		<property name="password" not-null="true"/>
+		<property name="role"/>
+		<property name="create_time"/>
+	</class>
+	
+</hibernate-mapping>
