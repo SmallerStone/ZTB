@@ -32,6 +32,8 @@ public class UserManagerImpl implements UserManager {
 
 	}
 
+	
+	
 	public UserDao getUserDao() {
 		return userDao;
 	}
@@ -40,4 +42,11 @@ public class UserManagerImpl implements UserManager {
 		this.userDao = userDao;
 	}
 
+	@Override
+	public User login(String username, String password) {
+		System.out.println("loginmanager");
+		return userDao.login(username, password);
+	}
+	
+	
 }

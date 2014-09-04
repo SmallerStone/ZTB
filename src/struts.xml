@@ -9,8 +9,18 @@
 	<constant name="struts.objectFactory" value="spring"></constant>
 	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
 	<package name="default" extends="struts-default">
+		<interceptors>
+			<interceptor name="login" class="com.tianchen.ztb.action.intercept.LoginInterceptor"></interceptor>
+			<interceptor-stack name="myStack">
+				<interceptor-ref name="defaultStack"/>
+				<interceptor-ref name="login"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		
+		<default-interceptor-ref name="myStack"/>		
 		<global-results>
-			<result name="error">/common/exception.jsp</result>
+			<result name="error">error.jsp</result>
+			<result name="login_error" type="redirect">login.jsp</result>
 		</global-results>
 		
 		<global-exception-mappings>
@@ -23,5 +33,12 @@
     		<result name="add_input">add_input.jsp</result>
     		<result name="add_success">index.jsp</result>
     	</action>
-	</package>
+    	<action name="hello" class="loginAction">
+			<result name="zhaobiao" type="redirect">zhaobiao.jsp</result>
+			<result name="toubiao" type="redirect">toubiao.jsp</result>
+			<result name="zhuanjia" type="redirect">zhuanjia.jsp</result>
+			<result name="login">login.jsp</result>
+    	</action>
+  </package>
+	
 </struts>

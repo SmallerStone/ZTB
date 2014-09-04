@@ -16,6 +16,8 @@ public class UserAction extends ActionSupport {
 	
 	private String personName;
 	
+	private String role;
+	
 	private UserManager userManager;
 	
 	@Override
@@ -27,6 +29,7 @@ public class UserAction extends ActionSupport {
 		User user = new User();
 		user.setUserName(userName);
 		user.setPassword(password);
+		user.setRole(Integer.parseInt(role));
 		user.setCreate_time(new Date());
 		userManager.addUser(user);
 		return "add_success";
@@ -59,6 +62,14 @@ public class UserAction extends ActionSupport {
 
 	public void setUserManager(UserManager userManager) {
 		this.userManager = userManager;
+	}
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
 	}
 	
 	

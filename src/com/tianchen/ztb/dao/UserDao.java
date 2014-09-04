@@ -26,4 +26,8 @@ public interface UserDao {
 	 * É¾³ýÓÃ»§
 	 */
 	public void delUser(int userId);
+	/*
+	 * µÇÂ¼
+	 */
+	public User login(String name, String password);
 }

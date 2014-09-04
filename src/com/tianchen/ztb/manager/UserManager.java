@@ -23,4 +23,11 @@ public interface UserManager {
 	 * 删除用户
 	 */
 	public void delUser(int userId);
+
+	
+	/*
+	 * 注册用户
+	 */
+	public User login(String username, String password);
+	
 }

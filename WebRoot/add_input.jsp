@@ -11,6 +11,11 @@
 <form action="user!add" method="post">
 	登录名：<input type="text" name="userName">
 	用户密码：<input type="text" name="password">
+	用户角色：<select name="role">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+		  </select>
 	<input type="submit" value="添加用户更">
 </form>
 </center>

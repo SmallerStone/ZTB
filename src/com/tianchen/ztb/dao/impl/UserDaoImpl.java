@@ -37,4 +37,21 @@ public class UserDaoImpl implements UserDao {
 		this.sessionFactory = sessionFactory;
 	}
 
+	@Override
+	public User login(String username, String password) {
+		System.out.println("dao----------");
+		System.out.println(username.length());
+		System.out.println(password.length());
+		if(username.length() != 0 && password.length()!= 0){
+			User user = (User)sessionFactory.getCurrentSession().createQuery("from User u where u.userName=? and u.password=?")
+						  .setParameter(0, username)
+						  .setParameter(1, password)
+						  .uniqueResult();
+			System.out.println("dao------end----");
+			return user;
+		}
+		return null;
+	}
+
+
 }
