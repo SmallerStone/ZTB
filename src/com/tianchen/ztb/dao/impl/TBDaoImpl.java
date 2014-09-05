@@ -18,5 +18,10 @@ public class TBDaoImpl implements TBDao{
 		    }
 		return list;
 	}
+	
+	public void setSessionFactory(SessionFactory sessionFactory) {
+		this.sessionFactory = sessionFactory;
+	}
 
+	
 }
