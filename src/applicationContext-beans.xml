@@ -10,8 +10,14 @@
 	<bean id="userDao" class="com.tianchen.ztb.dao.impl.UserDaoImpl">
 		<property name="sessionFactory" ref="sessionFactory"/>
 	</bean>
+	<bean id="tBDao" class="com.tianchen.ztb.dao.impl.TBDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
 	<bean id="userManager" class="com.tianchen.ztb.manager.impl.UserManagerImpl">
 		<property name="userDao" ref="userDao"/>
+	</bean>
+	<bean id="tBManager" class="com.tianchen.ztb.manager.impl.TBManagerImpl">
+		<property name="tBDao" ref="tBDao"/>
 	</bean>
 
 </beans>

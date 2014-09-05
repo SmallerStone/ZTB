@@ -35,7 +35,7 @@
     	</action>
     	<action name="hello" class="loginAction">
 			<result name="zhaobiao" type="redirect">zhaobiao.jsp</result>
-			<result name="toubiao" type="redirect">toubiao.jsp</result>
+			<result name="toubiao" type="redirect">tb/TBUser.jsp</result>
 			<result name="zhuanjia" type="redirect">zhuanjia.jsp</result>
 			<result name="login">login.jsp</result>
     	</action>
