@@ -172,9 +172,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							   <input type="text" name="search" placeholder="Search by Keyword">
 							</form>
 						<ol> 
+						  <c:catch>
+						     <c:forEach var="list" items="${lis2}">
 							<li>
-									<h4><a id="search" >国家工商局电脑采购</a></h4>
+									<h4><a id="zbname" >${list.zbname}</a></h4>
+									 <div style="display:none;">
+									  <input id="zbid" value="${list.id}"/>
+									 </div>
 							</li>
+							 </c:forEach>
+						   </c:catch>
 							<li>
 									<h4>政府办公用品采购</h4>
 							</li>
@@ -195,6 +202,25 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					</div> <!-- /widget-content -->
 					
 				</div> <!-- /widget -->
+				
+			<!-- 	<div class="widget">
+					<div class="widget-content">
+						<h3>国家工商局电脑采购 </h3>
+						<div style="float: right;">
+					  		<button id="11" class="btn" data-toggle="modal">申请该标</button>
+					 	</div>
+					 		</br>
+					 		</br>
+					 		</br>
+					 	<p>我公司与采购一批电脑，价格号商量，希望大家来报名，具体文档和信息如下11！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！'+"</p>"
+						<p><a>招标文件word下载</a></p>
+						<p><a>资料一下载</a></p>
+						<p><a>资料二下载</a></p>
+						<p><a>资料三下载</a></p>
+						<p><a>资四下载</a></p>
+					</div> widget-content
+				</div>widget -->
+								
 				
 			</div> <!-- /span9 -->
 			

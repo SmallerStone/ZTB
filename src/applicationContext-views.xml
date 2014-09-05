@@ -13,4 +13,7 @@
 	<bean id="loginAction" class="com.tianchen.ztb.action.LoginAction" scope="prototype">
 		<property name="userManager" ref="userManager"/>
 	</bean>
+	<bean id="tBAction" class="com.tianchen.ztb.action.TBAction" scope="prototype">
+		
+	</bean>
 </beans>

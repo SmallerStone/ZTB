@@ -39,6 +39,11 @@
 			<result name="zhuanjia" type="redirect">zhuanjia.jsp</result>
 			<result name="login">login.jsp</result>
     	</action>
+    	<action name="tb" class="tBAction">
+    		<result name="add_input">add_input.jsp</result>
+    		<result name="add_success">index.jsp</result>
+    	</action>
+    	
   </package>
 	
 </struts>

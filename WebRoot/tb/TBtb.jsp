@@ -1,4 +1,7 @@
 <%@ page language="java" import="java.util.*" pageEncoding="gb18030"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib uri="/struts-tags" prefix="s"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -177,13 +180,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							</thead>
 							
 							<tbody>
+						       <c:forEach var="list" items="${list2}">
 								<tr>
-									<td>1</td>
-									<td>工商电脑采购</td>
-									<td>电脑采购</td>
-									<td>2014/09/01</td>
+									<td>${list2.id}</td>
+									<td>${list2.zbname}</td>
+									<td>${list2.tbbookname}</td>
+									<td>${list2.data}</td>
 									<td><button class="btn btn-small btn-warning" data-toggle="modal">开标</button></td>
 								</tr>
+								</c:forEach>
 								<tr>
 									<td>2</td>
 									<td>房屋建筑</td>
