@@ -2,8 +2,7 @@ package com.tianchen.ztb.dao.impl;
 
 import java.util.List;
 
-import javax.ejb.FinderException;
-
+import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 
 import com.tianchen.ztb.bean.ZBbook;
@@ -43,8 +42,10 @@ public class ZBDaoImpl implements ZBDao {
 	@Override
 	public List<ZBbook> getAllZbBooks() {
 		String hql = "from ZBbook";
-		List<ZBbook> list = sessionFactory.getCurrentSession().createQuery(hql).list();
-		return null;
+		Query query = sessionFactory.getCurrentSession().createQuery(hql);
+		@SuppressWarnings("unchecked")
+		List<ZBbook> list = query.list();
+		return list;
 	}
 
 }
