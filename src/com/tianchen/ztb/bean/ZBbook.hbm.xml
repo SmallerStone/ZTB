@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="com.tianchen.ztb.bean.ZBbook" table="t_ZBbook">
+		<id name="id">
+			<generator class="native"/>
+		</id>
+		<property name="zbCode" unique="true" not-null="true"></property>
+		<property name="zbpath"/>
+		<property name="zbname"/>
+		<property name="zbintro"/>
+		<property name="updata"/>
+		<many-to-one name="user" 
+        	column="userId"
+        	not-null="true"/>
+	</class>
+	
+</hibernate-mapping>

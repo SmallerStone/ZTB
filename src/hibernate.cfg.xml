@@ -10,5 +10,7 @@
 			
 		<mapping resource="com/tianchen/ztb/bean/Person.hbm.xml"/>
 		<mapping resource="com/tianchen/ztb/bean/User.hbm.xml"/>
+		<mapping resource="com/tianchen/ztb/bean/ZBbook.hbm.xml"/>
+		<mapping resource="com/tianchen/ztb/bean/TBbook.hbm.xml"/>
 	</session-factory>
 </hibernate-configuration>

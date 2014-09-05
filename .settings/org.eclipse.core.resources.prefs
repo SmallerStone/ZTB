@@ -4,5 +4,6 @@ encoding//WebRoot/tb/TBUser.jsp=gb18030
 encoding//WebRoot/tb/TBtb.jsp=gb18030
 encoding//WebRoot/tb/js=UTF-8
 encoding//WebRoot/tb/js/TBUser.js=gb18030
+encoding//src/com/tianchen/ztb/bean/TBbook.java=gb18030
 encoding//src/com/tianchen/ztb/bean/ZBbook.java=gb18030
 encoding//src/com/tianchen/ztb/common/Json.java=UTF-8

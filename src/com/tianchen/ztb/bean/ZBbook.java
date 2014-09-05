@@ -1,26 +1,29 @@
 package com.tianchen.ztb.bean;
 
-import javax.xml.crypto.Data;
+import java.util.Date;
 
 public class ZBbook {
     private int id;
-    private int zbuserid;//招标人id
-    private String zbpath;//招标书路径
-    private String zbname;//招标书名称
-    private String zbintro;//招标书简介
-    private Data updata;//上传时间
+        
+    private User user;
+    
+    private String zbCode;//招标书编码
+    
+    private String zbpath;//招标文件路径
+    
+    private String zbname;//招标名称
+    
+    private String zbintro;//招标简介
+    
+    private Date updata;//上传时间
+    
 	public int getId() {
 		return id;
 	}
 	public void setId(int id) {
 		this.id = id;
 	}
-	public int getZbuserid() {
-		return zbuserid;
-	}
-	public void setZbuserid(int zbuserid) {
-		this.zbuserid = zbuserid;
-	}
+
 	public String getZbpath() {
 		return zbpath;
 	}
@@ -39,13 +42,23 @@ public class ZBbook {
 	public void setZbintro(String zbintro) {
 		this.zbintro = zbintro;
 	}
-	public Data getUpdata() {
+	public User getUser() {
+		return user;
+	}
+	public void setUser(User user) {
+		this.user = user;
+	}
+	public Date getUpdata() {
 		return updata;
 	}
-	public void setUpdata(Data updata) {
+	public void setUpdata(Date updata) {
 		this.updata = updata;
 	}
-    
-    
-    
+	public String getZbCode() {
+		return zbCode;
+	}
+	public void setZbCode(String zbCode) {
+		this.zbCode = zbCode;
+	}
+
 }
