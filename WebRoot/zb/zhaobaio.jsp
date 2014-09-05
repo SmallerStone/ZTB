@@ -1,4 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="GB18030"%>
+
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
